@@ -1,0 +1,70 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="maDiv">Je suis une super div HTML</div>
+    <div id="nouvellediv">salut je suis une div useless</div>
+    <div>
+        <h3>Passe la souris sur ce mignon petit chat :)</h3>
+    </div>
+    <img src="img/OIP.jpg" alt="" onmouseover="catalerte()">
+    <p id="demo">La page se situe ici : file:///C:/Users/tangu/Desktop/Cours/index.html</p>
+    <input type="text" onkeydown="press()" placeholder="Tu va vites abandonner d'écrire ici :)">
+    <button onclick="DisBonjour()">Clique pour saluer :)</button>
+    <button onclick="changebg()">Clique pour changer de bg :)</button>
+    <button onclick="changebutton()" id="buttontochange">Clique pour changer l'apparence du bouton :)</button>
+    <button onclick="reset()">Clique pour reset les changements :)</button>
+    <div></div><img src="img/mignon.jpg" alt="" onmouseover="mouseon()" id="img1" onmouseout="mouseout()">
+    <br>
+    <a href="page2.html">La page suivante.</a>
+    
+    <script>
+
+        
+        console.log("Démarrage de la page web");
+        console.log(document);
+
+        function press(){
+            alert("lol");
+        }
+        function alerte() {  
+            alert("Attention oulala c'est une alerte");  
+        }  
+        window.onload = alerte();
+        function DisBonjour(){
+            alert("Salutation !");
+        }
+        function catalerte(){
+            alert("J'aime quand tu me caresses :)")
+        }
+        function changebg(){
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+        function changebutton(){
+            apparence = document.getElementById("buttontochange");
+            apparence.style.width = '50%';
+        }
+        function reset(){
+            document.body.style.backgroundColor = "white";
+            apparence.style.width = '18%';
+        }
+        function mouseon(){
+            document.getElementById("img1").src = "img/encoremignon.jpg";
+       
+        }
+        function mouseout(){
+            document.getElementById("img1").src = "img/mignon.jpg";
+        }
+
+
+
+
+
+        document.getElementById("demo").innerHTML = "La page se situe ici : " + window.location.href;
+
+    </script>
+
+</body></html>

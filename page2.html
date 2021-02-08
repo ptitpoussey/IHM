@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<img src="img/image3.jpg" alt="" onload="changeimg()" style="height: 100%; width: 100%;" id="img1">
+</body>
+<script>
+     var images = new Array()
+     images[0] = "img/image1.jpg";
+     images[1] = "img/image2.jpg";
+     setInterval("changeimg()", 30000);
+     var x=0;
+
+     function changeimg()
+     {
+                document.getElementById("img1").src=images[x]
+                x++;
+                if (images.length == x) 
+                {
+                    x = 0;
+                }
+     }
+</script>
+</html>
